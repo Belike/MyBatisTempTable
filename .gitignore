@@ -20,10 +20,13 @@ camunda-db*
 *.db
 *.sql
 
+<<<<<<< HEAD
 # Docker Storage
 db/storage
 db_postgres/storage_postgres
 
+=======
+>>>>>>> e77d6bc7f1a0829d77693ca485e317b577a16126
 # Node.js
 node_modules
 
