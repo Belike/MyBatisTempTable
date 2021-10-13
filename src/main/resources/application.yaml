@@ -1,0 +1,26 @@
+spring.datasource:
+#  url: jdbc:h2:./camunda-db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+#shareable h2 database: jdbc:h2:./camunda-db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+#  url: jdbc:mysql://localhost:3306/camunda
+#  username: root
+#  password: sa
+#spring.h2.console.enabled: true
+  url: jdbc:postgresql://localhost:5432/camunda
+  username: camunda
+  password: camunda
+camunda.bpm:
+  admin-user:
+    id: demo
+    password: demo
+    firstName: Demo
+    lastName: Demo
+  filter:
+    create: All Tasks
+  default-serialization-format: application/json
+  authorization:
+    enabled: true
+  generic-properties:
+    properties:
+      cmmnEnabled: false
+      standaloneTasksEnabled: false
+server.port: 8080

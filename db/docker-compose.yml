@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  db:
+    restart: always
+    container_name: mybatis_mysql
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: 'camunda'
+      MYSQL_ROOT_PASSWORD: 'sa'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - ./storage/db:/var/lib/mysql:rw
+      - ./sql:/docker-entrypoint-initdb.d/:rw
